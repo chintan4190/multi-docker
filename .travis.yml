@@ -18,7 +18,7 @@ after_success:
   - docker login -u $DOCKER_ID -p $DOCKER_PASSWORD docker.io
 
   # Take those images and push them to docker hub
-  - docker push chintan4190/multi-client
-  - docker push chintan4190/multi-nginx
-  - docker push chintan4190/multi-server
-  - docker push chintan4190/multi-worker
+  - docker push chintan4190/multi-client:latest
+  - docker push chintan4190/multi-nginx:latest
+  - docker push chintan4190/multi-server:latest
+  - docker push chintan4190/multi-worker:latest
