@@ -15,7 +15,8 @@ after_success:
   - docker build -t chintan4190/multi-server ./server
   - docker build -t chintan4190/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - docker login -u $DOCKER_ID -p $DOCKER_PASSWORD docker.io
+
   # Take those images and push them to docker hub
   - docker push chintan4190/multi-client
   - docker push chintan4190/multi-nginx
